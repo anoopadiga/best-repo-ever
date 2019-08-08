@@ -6,6 +6,6 @@ trigger ExampleTrigger on Contact (after insert, after delete) {
                     recordCount + ' contact(s) were inserted.');
     }
     else if (Trigger.isDelete) {
-        // Process after delete
+        // Process after delete - Yet to be completed
     }
 }
