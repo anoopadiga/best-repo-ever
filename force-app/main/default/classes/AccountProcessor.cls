@@ -11,7 +11,7 @@ public without sharing class AccountProcessor {
         
         Map<Id, Integer> accToContactMap = new Map<Id, Integer>();
         for(Contact con : contactList){
-            if(accToContactMap.get(con.AccountId) != null){
+            if(!accToContactMap.isEmpty() && accToContactMap.get(con.AccountId) != null){
                 Integer count = accToContactMap.get(con.AccountId);
                 accToContactMap.put(con.AccountId, count + 1);
             }else{
